@@ -7,6 +7,7 @@
 //
 
 #import "SWPersistenceManager.h"
+#import "SWNode.h"
 
 
 @implementation SWPersistenceManager
@@ -54,6 +55,32 @@
             NSLog(@"Read error: %@", readError.localizedDescription);
         }
         NSLog(@"%@", fileString);
+
+        NSError *jsonError;
+        NSData *jsonData = [NSData dataWithContentsOfURL:theURL
+                                                 options:0
+                                                   error:&jsonError];
+        if (jsonError) {
+            NSLog(@"Error: %@", jsonError.localizedDescription);
+        }
+
+        id jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                        options:0
+                                                          error:&jsonError];
+        if (jsonError) {
+            NSLog(@"Error: %@", jsonError.localizedDescription);
+        }
+
+
+        NSError *modelError;
+        SWNode *node = [MTLJSONAdapter modelOfClass:[SWNode class]
+                                 fromJSONDictionary:jsonObject
+                                              error:&modelError];
+        if (modelError) {
+            NSLog(@"Error: %@", modelError.localizedDescription);
+        }
+
+        NSLog(@"%@", node);
     }
 }
 
