@@ -18,6 +18,7 @@
     NSURL *dirURL = [NSURL fileURLWithPath:[NSHomeDirectory() stringByAppendingPathComponent:@"spiderweb"]];
     NSArray *nodes = [persistenceManager nodesFromDirectoryAtURL:dirURL];
     NSLog(@"NODES:\n%@", nodes);
+    [persistenceManager saveNodes:nodes toDirectoryAtURL:dirURL];
 }
 
 @end

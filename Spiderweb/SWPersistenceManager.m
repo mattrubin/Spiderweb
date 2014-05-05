@@ -86,4 +86,32 @@
     return nodes;
 }
 
+- (void)saveNodes:(NSArray *)nodes toDirectoryAtURL:(NSURL *)directory
+{
+    for (SWNode *node in nodes) {
+        NSDictionary *jsonDictionary = [MTLJSONAdapter JSONDictionaryFromModel:node];
+
+        NSError *jsonError;
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonDictionary
+                                                           options:NSJSONWritingPrettyPrinted
+                                                             error:&jsonError];
+        if (jsonError) {
+            NSLog(@"Error: %@", jsonError.localizedDescription);
+            continue;
+        }
+
+        NSURL *fileURL = [directory URLByAppendingPathComponent:node.title.lowercaseString];
+        fileURL = [fileURL URLByAppendingPathExtension:@"json"];
+
+        NSError *writeError;
+        [jsonData writeToURL:fileURL
+                     options:0
+                       error:&writeError];
+        if (writeError) {
+            NSLog(@"Error: %@", writeError.localizedDescription);
+            continue;
+        }
+    }
+}
+
 @end

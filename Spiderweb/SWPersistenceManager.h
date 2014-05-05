@@ -13,4 +13,6 @@
 
 - (NSArray *)nodesFromDirectoryAtURL:(NSURL *)directoryToScan;
 
+- (void)saveNodes:(NSArray *)nodes toDirectoryAtURL:(NSURL *)directory;
+
 @end
