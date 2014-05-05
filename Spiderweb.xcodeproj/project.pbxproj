@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9B24FA619172CF4004532FF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B24FA519172CF4004532FF /* Cocoa.framework */; };
+		C9B24FB019172CF4004532FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9B24FAE19172CF4004532FF /* InfoPlist.strings */; };
+		C9B24FB219172CF4004532FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B24FB119172CF4004532FF /* main.m */; };
+		C9B24FB619172CF4004532FF /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C9B24FB419172CF4004532FF /* Credits.rtf */; };
+		C9B24FB919172CF4004532FF /* SWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B24FB819172CF4004532FF /* SWAppDelegate.m */; };
+		C9B24FBC19172CF4004532FF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9B24FBA19172CF4004532FF /* MainMenu.xib */; };
+		C9B24FBE19172CF4004532FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9B24FBD19172CF4004532FF /* Images.xcassets */; };
+		C9B24FC519172CF4004532FF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B24FC419172CF4004532FF /* XCTest.framework */; };
+		C9B24FC619172CF4004532FF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B24FA519172CF4004532FF /* Cocoa.framework */; };
+		C9B24FCE19172CF4004532FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9B24FCC19172CF4004532FF /* InfoPlist.strings */; };
+		C9B24FD019172CF4004532FF /* SpiderwebTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B24FCF19172CF4004532FF /* SpiderwebTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C9B24FC719172CF4004532FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9B24F9A19172CF4004532FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9B24FA119172CF4004532FF;
+			remoteInfo = Spiderweb;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C9B24FA219172CF4004532FF /* Spiderweb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spiderweb.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9B24FA519172CF4004532FF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C9B24FA819172CF4004532FF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		C9B24FA919172CF4004532FF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C9B24FAA19172CF4004532FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C9B24FAD19172CF4004532FF /* Spiderweb-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Spiderweb-Info.plist"; sourceTree = "<group>"; };
+		C9B24FAF19172CF4004532FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9B24FB119172CF4004532FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C9B24FB319172CF4004532FF /* Spiderweb-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Spiderweb-Prefix.pch"; sourceTree = "<group>"; };
+		C9B24FB519172CF4004532FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		C9B24FB719172CF4004532FF /* SWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWAppDelegate.h; sourceTree = "<group>"; };
+		C9B24FB819172CF4004532FF /* SWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWAppDelegate.m; sourceTree = "<group>"; };
+		C9B24FBB19172CF4004532FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C9B24FBD19172CF4004532FF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C9B24FC319172CF4004532FF /* SpiderwebTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpiderwebTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9B24FC419172CF4004532FF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C9B24FCB19172CF4004532FF /* SpiderwebTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpiderwebTests-Info.plist"; sourceTree = "<group>"; };
+		C9B24FCD19172CF4004532FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9B24FCF19172CF4004532FF /* SpiderwebTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpiderwebTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9B24F9F19172CF4004532FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9B24FA619172CF4004532FF /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9B24FC019172CF4004532FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9B24FC619172CF4004532FF /* Cocoa.framework in Frameworks */,
+				C9B24FC519172CF4004532FF /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9B24F9919172CF4004532FF = {
+			isa = PBXGroup;
+			children = (
+				C9B24FAB19172CF4004532FF /* Spiderweb */,
+				C9B24FC919172CF4004532FF /* SpiderwebTests */,
+				C9B24FA419172CF4004532FF /* Frameworks */,
+				C9B24FA319172CF4004532FF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9B24FA319172CF4004532FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9B24FA219172CF4004532FF /* Spiderweb.app */,
+				C9B24FC319172CF4004532FF /* SpiderwebTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9B24FA419172CF4004532FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9B24FA519172CF4004532FF /* Cocoa.framework */,
+				C9B24FC419172CF4004532FF /* XCTest.framework */,
+				C9B24FA719172CF4004532FF /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9B24FA719172CF4004532FF /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9B24FA819172CF4004532FF /* AppKit.framework */,
+				C9B24FA919172CF4004532FF /* CoreData.framework */,
+				C9B24FAA19172CF4004532FF /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		C9B24FAB19172CF4004532FF /* Spiderweb */ = {
+			isa = PBXGroup;
+			children = (
+				C9B24FB719172CF4004532FF /* SWAppDelegate.h */,
+				C9B24FB819172CF4004532FF /* SWAppDelegate.m */,
+				C9B24FBA19172CF4004532FF /* MainMenu.xib */,
+				C9B24FBD19172CF4004532FF /* Images.xcassets */,
+				C9B24FAC19172CF4004532FF /* Supporting Files */,
+			);
+			path = Spiderweb;
+			sourceTree = "<group>";
+		};
+		C9B24FAC19172CF4004532FF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9B24FAD19172CF4004532FF /* Spiderweb-Info.plist */,
+				C9B24FAE19172CF4004532FF /* InfoPlist.strings */,
+				C9B24FB119172CF4004532FF /* main.m */,
+				C9B24FB319172CF4004532FF /* Spiderweb-Prefix.pch */,
+				C9B24FB419172CF4004532FF /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9B24FC919172CF4004532FF /* SpiderwebTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9B24FCF19172CF4004532FF /* SpiderwebTests.m */,
+				C9B24FCA19172CF4004532FF /* Supporting Files */,
+			);
+			path = SpiderwebTests;
+			sourceTree = "<group>";
+		};
+		C9B24FCA19172CF4004532FF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9B24FCB19172CF4004532FF /* SpiderwebTests-Info.plist */,
+				C9B24FCC19172CF4004532FF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9B24FA119172CF4004532FF /* Spiderweb */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9B24FD319172CF4004532FF /* Build configuration list for PBXNativeTarget "Spiderweb" */;
+			buildPhases = (
+				C9B24F9E19172CF4004532FF /* Sources */,
+				C9B24F9F19172CF4004532FF /* Frameworks */,
+				C9B24FA019172CF4004532FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Spiderweb;
+			productName = Spiderweb;
+			productReference = C9B24FA219172CF4004532FF /* Spiderweb.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9B24FC219172CF4004532FF /* SpiderwebTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9B24FD619172CF4004532FF /* Build configuration list for PBXNativeTarget "SpiderwebTests" */;
+			buildPhases = (
+				C9B24FBF19172CF4004532FF /* Sources */,
+				C9B24FC019172CF4004532FF /* Frameworks */,
+				C9B24FC119172CF4004532FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9B24FC819172CF4004532FF /* PBXTargetDependency */,
+			);
+			name = SpiderwebTests;
+			productName = SpiderwebTests;
+			productReference = C9B24FC319172CF4004532FF /* SpiderwebTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9B24F9A19172CF4004532FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SW;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Matt Rubin";
+				TargetAttributes = {
+					C9B24FC219172CF4004532FF = {
+						TestTargetID = C9B24FA119172CF4004532FF;
+					};
+				};
+			};
+			buildConfigurationList = C9B24F9D19172CF4004532FF /* Build configuration list for PBXProject "Spiderweb" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9B24F9919172CF4004532FF;
+			productRefGroup = C9B24FA319172CF4004532FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9B24FA119172CF4004532FF /* Spiderweb */,
+				C9B24FC219172CF4004532FF /* SpiderwebTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9B24FA019172CF4004532FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9B24FB019172CF4004532FF /* InfoPlist.strings in Resources */,
+				C9B24FBE19172CF4004532FF /* Images.xcassets in Resources */,
+				C9B24FB619172CF4004532FF /* Credits.rtf in Resources */,
+				C9B24FBC19172CF4004532FF /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9B24FC119172CF4004532FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9B24FCE19172CF4004532FF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9B24F9E19172CF4004532FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9B24FB919172CF4004532FF /* SWAppDelegate.m in Sources */,
+				C9B24FB219172CF4004532FF /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9B24FBF19172CF4004532FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9B24FD019172CF4004532FF /* SpiderwebTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C9B24FC819172CF4004532FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9B24FA119172CF4004532FF /* Spiderweb */;
+			targetProxy = C9B24FC719172CF4004532FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C9B24FAE19172CF4004532FF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9B24FAF19172CF4004532FF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C9B24FB419172CF4004532FF /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9B24FB519172CF4004532FF /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		C9B24FBA19172CF4004532FF /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9B24FBB19172CF4004532FF /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		C9B24FCC19172CF4004532FF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9B24FCD19172CF4004532FF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C9B24FD119172CF4004532FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C9B24FD219172CF4004532FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C9B24FD419172CF4004532FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Spiderweb/Spiderweb-Prefix.pch";
+				INFOPLIST_FILE = "Spiderweb/Spiderweb-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C9B24FD519172CF4004532FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Spiderweb/Spiderweb-Prefix.pch";
+				INFOPLIST_FILE = "Spiderweb/Spiderweb-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C9B24FD719172CF4004532FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Spiderweb.app/Contents/MacOS/Spiderweb";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Spiderweb/Spiderweb-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SpiderwebTests/SpiderwebTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C9B24FD819172CF4004532FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Spiderweb.app/Contents/MacOS/Spiderweb";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Spiderweb/Spiderweb-Prefix.pch";
+				INFOPLIST_FILE = "SpiderwebTests/SpiderwebTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9B24F9D19172CF4004532FF /* Build configuration list for PBXProject "Spiderweb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9B24FD119172CF4004532FF /* Debug */,
+				C9B24FD219172CF4004532FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9B24FD319172CF4004532FF /* Build configuration list for PBXNativeTarget "Spiderweb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9B24FD419172CF4004532FF /* Debug */,
+				C9B24FD519172CF4004532FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C9B24FD619172CF4004532FF /* Build configuration list for PBXNativeTarget "SpiderwebTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9B24FD719172CF4004532FF /* Debug */,
+				C9B24FD819172CF4004532FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9B24F9A19172CF4004532FF /* Project object */;
+}
