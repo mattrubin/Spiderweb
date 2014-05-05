@@ -12,13 +12,12 @@
 
 @implementation SWPersistenceManager
 
-- (void)scanDirectoryAtURL:(NSURL *)directoryToScan
+- (NSArray *)nodesFromDirectoryAtURL:(NSURL *)directoryToScan
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
 
     NSDirectoryEnumerator *dirEnumerator = [fileManager enumeratorAtURL:directoryToScan
-                                             includingPropertiesForKeys:@[NSURLNameKey,
-                                                                          NSURLIsRegularFileKey,
+                                             includingPropertiesForKeys:@[NSURLIsRegularFileKey,
                                                                           NSURLIsReadableKey]
                                                                 options:NSDirectoryEnumerationSkipsHiddenFiles |
                                             NSDirectoryEnumerationSkipsPackageDescendants |
@@ -28,60 +27,63 @@
                                                                return YES;
                                                            }];
 
+    NSMutableArray *nodes = [NSMutableArray array];
+
     for (NSURL *theURL in dirEnumerator) {
+        // Check that the URL points to a readable regular file
+
+        NSError *resourceValueError;
+
         NSNumber *isRegularFile;
-        [theURL getResourceValue:&isRegularFile forKey:NSURLIsRegularFileKey error:NULL];
-        if (!isRegularFile.boolValue) {
+        [theURL getResourceValue:&isRegularFile forKey:NSURLIsRegularFileKey error:&resourceValueError];
+        if (!isRegularFile.boolValue || resourceValueError) {
             continue;
         }
 
         NSNumber *isReadable;
-        [theURL getResourceValue:&isReadable forKey:NSURLIsReadableKey error:NULL];
-        if (!isReadable.boolValue) {
+        [theURL getResourceValue:&isReadable forKey:NSURLIsReadableKey error:&resourceValueError];
+        if (!isReadable.boolValue || resourceValueError) {
             continue;
         }
 
-        NSString *fileName;
-        [theURL getResourceValue:&fileName forKey:NSURLNameKey error:NULL];
-        NSLog(@"%@ :", fileName);
-
-
-        NSStringEncoding stringEncoding;
-        NSError *readError;
-        NSString *fileString = [NSString stringWithContentsOfURL:theURL
-                                                    usedEncoding:&stringEncoding
-                                                           error:&readError];
-        if (readError) {
-            NSLog(@"Read error: %@", readError.localizedDescription);
-        }
-        NSLog(@"%@", fileString);
+        // Read in the file as a JSON object
 
         NSError *jsonError;
         NSData *jsonData = [NSData dataWithContentsOfURL:theURL
                                                  options:0
                                                    error:&jsonError];
         if (jsonError) {
-            NSLog(@"Error: %@", jsonError.localizedDescription);
+            NSLog(@"Error: %@ (%@)", jsonError.localizedDescription, theURL);
+            continue;
         }
 
         id jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData
                                                         options:0
                                                           error:&jsonError];
         if (jsonError) {
-            NSLog(@"Error: %@", jsonError.localizedDescription);
+            NSLog(@"Error: %@ (%@)", jsonError.localizedDescription, theURL);
+            continue;
         }
 
+        // Convert the JSON into a model object
 
         NSError *modelError;
         SWNode *node = [MTLJSONAdapter modelOfClass:[SWNode class]
                                  fromJSONDictionary:jsonObject
                                               error:&modelError];
         if (modelError) {
-            NSLog(@"Error: %@", modelError.localizedDescription);
+            NSLog(@"Error: %@ (%@)", modelError.localizedDescription, theURL);
+            continue;
         }
 
-        NSLog(@"%@", node);
+        if (node) {
+            [nodes addObject:node];
+        } else {
+            NSLog(@"UNKNOWN ERROR: reached the end of file import without a valid model object.");
+        }
     }
+
+    return nodes;
 }
 
 @end

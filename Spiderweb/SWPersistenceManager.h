@@ -11,6 +11,6 @@
 
 @interface SWPersistenceManager : NSObject
 
-- (void)scanDirectoryAtURL:(NSURL *)directoryToScan;
+- (NSArray *)nodesFromDirectoryAtURL:(NSURL *)directoryToScan;
 
 @end

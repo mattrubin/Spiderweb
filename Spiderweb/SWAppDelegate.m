@@ -16,7 +16,8 @@
 {
     SWPersistenceManager *persistenceManager = [SWPersistenceManager new];
     NSURL *dirURL = [NSURL fileURLWithPath:[NSHomeDirectory() stringByAppendingPathComponent:@"spiderweb"]];
-    [persistenceManager scanDirectoryAtURL:dirURL];
+    NSArray *nodes = [persistenceManager nodesFromDirectoryAtURL:dirURL];
+    NSLog(@"NODES:\n%@", nodes);
 }
 
 @end
