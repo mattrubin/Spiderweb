@@ -18,4 +18,12 @@
     return @{@"title": @"Title"};
 }
 
+
+#pragma mark - SWPersistentModel
+
+- (NSString *)persistentFileName
+{
+    return [self.title.lowercaseString stringByReplacingOccurrencesOfString:@" " withString:@"-"];
+}
+
 @end

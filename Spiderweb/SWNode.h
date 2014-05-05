@@ -7,9 +7,10 @@
 //
 
 #import <Mantle/Mantle.h>
+#import "SWPersistentModel.h"
 
 
-@interface SWNode : MTLModel <MTLJSONSerializing>
+@interface SWNode : MTLModel <MTLJSONSerializing, SWPersistentModel>
 
 @property (nonatomic, copy) NSString *title;
 

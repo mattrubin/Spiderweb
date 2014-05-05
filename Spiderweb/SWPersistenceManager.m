@@ -100,7 +100,7 @@
             continue;
         }
 
-        NSURL *fileURL = [directory URLByAppendingPathComponent:node.title.lowercaseString];
+        NSURL *fileURL = [directory URLByAppendingPathComponent:node.persistentFileName];
         fileURL = [fileURL URLByAppendingPathExtension:@"json"];
 
         NSError *writeError;
