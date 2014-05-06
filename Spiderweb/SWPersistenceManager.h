@@ -11,7 +11,7 @@
 
 @interface SWPersistenceManager : NSObject
 
-- (NSArray *)nodesFromDirectoryAtURL:(NSURL *)directoryToScan;
+- (NSArray *)modelsFromDirectoryAtURL:(NSURL *)directoryToScan;
 
 - (void)saveModels:(NSArray *)models toDirectoryAtURL:(NSURL *)directory;
 

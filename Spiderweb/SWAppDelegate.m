@@ -16,9 +16,9 @@
 {
     SWPersistenceManager *persistenceManager = [SWPersistenceManager new];
     NSURL *dirURL = [NSURL fileURLWithPath:[NSHomeDirectory() stringByAppendingPathComponent:@"spiderweb"]];
-    NSArray *nodes = [persistenceManager nodesFromDirectoryAtURL:dirURL];
-    NSLog(@"NODES:\n%@", nodes);
-    [persistenceManager saveModels:nodes toDirectoryAtURL:dirURL];
+    NSArray *models = [persistenceManager modelsFromDirectoryAtURL:dirURL];
+    NSLog(@"MODELS:\n%@", models);
+    [persistenceManager saveModels:models toDirectoryAtURL:dirURL];
 }
 
 @end

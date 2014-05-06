@@ -7,12 +7,12 @@
 //
 
 #import "SWPersistenceManager.h"
-#import "SWNode.h"
+#import "SWModel.h"
 
 
 @implementation SWPersistenceManager
 
-- (NSArray *)nodesFromDirectoryAtURL:(NSURL *)directoryToScan
+- (NSArray *)modelsFromDirectoryAtURL:(NSURL *)directoryToScan
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
 
@@ -27,7 +27,7 @@
                                                                return YES;
                                                            }];
 
-    NSMutableArray *nodes = [NSMutableArray array];
+    NSMutableArray *models = [NSMutableArray array];
 
     for (NSURL *theURL in dirEnumerator) {
         // Check that the URL points to a readable regular file
@@ -68,22 +68,22 @@
         // Convert the JSON into a model object
 
         NSError *modelError;
-        SWNode *node = [MTLJSONAdapter modelOfClass:[SWNode class]
-                                 fromJSONDictionary:jsonObject
-                                              error:&modelError];
+        SWModel *model = [MTLJSONAdapter modelOfClass:[SWModel class]
+                                   fromJSONDictionary:jsonObject
+                                                error:&modelError];
         if (modelError) {
             NSLog(@"Error: %@ (%@)", modelError.localizedDescription, theURL);
             continue;
         }
 
-        if (node) {
-            [nodes addObject:node];
+        if (model) {
+            [models addObject:model];
         } else {
             NSLog(@"UNKNOWN ERROR: reached the end of file import without a valid model object.");
         }
     }
 
-    return nodes;
+    return models;
 }
 
 - (void)saveModels:(NSArray *)models toDirectoryAtURL:(NSURL *)directory
