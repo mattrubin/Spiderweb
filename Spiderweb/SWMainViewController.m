@@ -30,6 +30,12 @@
     return self;
 }
 
+- (void)loadView
+{
+    [super loadView];
+    [self updateFieldsWithNode:nil];
+}
+
 
 #pragma mark - NSTableViewDataSource
 
@@ -75,9 +81,11 @@
 - (void)updateFieldsWithNode:(SWNode *)node
 {
     if (!node) {
+        self.titleField.enabled = NO;
         self.titleField.stringValue = @"";
         self.uniqueIDField.stringValue = @"";
     } else {
+        self.titleField.enabled = YES;
         self.titleField.stringValue = node.title ?: @"";
         self.uniqueIDField.stringValue = node.uniqueID.UUIDString;
     }
