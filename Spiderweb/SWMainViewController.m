@@ -91,4 +91,34 @@
     }
 }
 
+
+#pragma mark - Actions
+
+- (IBAction)addObject:(id)sender
+{
+    SWNode *newNode = [SWNode new];
+    newNode.title = @"New Node";
+
+    self.models = [self.models arrayByAddingObject:newNode];
+    NSUInteger newRowIndex = self.models.count - 1;
+
+    [self.tableView insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:newRowIndex]
+                          withAnimation:NSTableViewAnimationSlideDown | NSTableViewAnimationEffectFade];
+    [self.tableView selectRowIndexes:[NSIndexSet indexSetWithIndex:newRowIndex]
+                byExtendingSelection:NO];
+    [self.tableView scrollRowToVisible:newRowIndex];
+
+    [self.titleField becomeFirstResponder];
+}
+
+- (IBAction)deleteObject:(id)sender
+{
+    NSMutableArray *mutableModels = [self.models mutableCopy];
+    [mutableModels removeObject:self.selectedNode];
+    self.models = [mutableModels copy];
+
+    [self.tableView removeRowsAtIndexes:[NSIndexSet indexSetWithIndex:self.tableView.selectedRow]
+                          withAnimation:NSTableViewAnimationEffectFade];
+}
+
 @end

@@ -19,14 +19,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="U3e-lL-hgN">
-                    <rect key="frame" x="-1" y="-1" width="202" height="362"/>
+                    <rect key="frame" x="-1" y="19" width="202" height="342"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                     <clipView key="contentView" id="fnL-sY-oGm">
-                        <rect key="frame" x="1" y="1" width="200" height="360"/>
+                        <rect key="frame" x="1" y="1" width="200" height="340"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" id="sRG-6z-Qjk">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="360"/>
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="340"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -116,7 +116,33 @@
                         </textField>
                     </subviews>
                 </customView>
+                <button verticalHuggingPriority="750" id="bPO-vb-Hlc">
+                    <rect key="frame" x="160" y="-2" width="21" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="QMf-NY-F3z">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="addObject:" target="-2" id="qYv-DM-wUa"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" id="iZr-ep-vEO">
+                    <rect key="frame" x="180" y="-2" width="21" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSRemoveTemplate" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sy1-hK-r8p">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="deleteObject:" target="-2" id="vVJ-Fd-41y"/>
+                    </connections>
+                </button>
             </subviews>
         </customView>
     </objects>
+    <resources>
+        <image name="NSAddTemplate" width="8" height="8"/>
+        <image name="NSRemoveTemplate" width="8" height="8"/>
+    </resources>
 </document>
