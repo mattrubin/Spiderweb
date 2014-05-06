@@ -86,10 +86,12 @@
     return nodes;
 }
 
-- (void)saveNodes:(NSArray *)nodes toDirectoryAtURL:(NSURL *)directory
+- (void)saveModels:(NSArray *)models toDirectoryAtURL:(NSURL *)directory
 {
-    for (SWNode *node in nodes) {
-        NSDictionary *jsonDictionary = [MTLJSONAdapter JSONDictionaryFromModel:node];
+    for (SWModel *model in models) {
+        NSAssert([model isKindOfClass:[SWModel class]], @"Attempted to save a non-model object: %@", model);
+
+        NSDictionary *jsonDictionary = [MTLJSONAdapter JSONDictionaryFromModel:model];
 
         NSError *jsonError;
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonDictionary
@@ -100,7 +102,7 @@
             continue;
         }
 
-        NSURL *fileURL = [directory URLByAppendingPathComponent:node.persistentFileName];
+        NSURL *fileURL = [directory URLByAppendingPathComponent:model.persistentFileName];
         fileURL = [fileURL URLByAppendingPathExtension:@"json"];
 
         NSError *writeError;
