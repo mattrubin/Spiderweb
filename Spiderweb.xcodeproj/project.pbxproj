@@ -10,6 +10,7 @@
 		B950A01067D649D5B68E0B3E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A03DAC3CFC43EB8A8D61A4 /* libPods.a */; };
 		C92A401D191747B400244024 /* SWPersistenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C92A401C191747B400244024 /* SWPersistenceManager.m */; };
 		C92A402119174B0200244024 /* SWNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C92A402019174B0200244024 /* SWNode.m */; };
+		C92A402619175ECF00244024 /* SWModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C92A402519175ECF00244024 /* SWModel.m */; };
 		C9B24FB019172CF4004532FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9B24FAE19172CF4004532FF /* InfoPlist.strings */; };
 		C9B24FB219172CF4004532FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B24FB119172CF4004532FF /* main.m */; };
 		C9B24FB619172CF4004532FF /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C9B24FB419172CF4004532FF /* Credits.rtf */; };
@@ -37,6 +38,8 @@
 		C92A401F19174B0200244024 /* SWNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWNode.h; sourceTree = "<group>"; };
 		C92A402019174B0200244024 /* SWNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWNode.m; sourceTree = "<group>"; };
 		C92A402219175CF400244024 /* SWPersistentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWPersistentModel.h; sourceTree = "<group>"; };
+		C92A402419175ECF00244024 /* SWModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWModel.h; sourceTree = "<group>"; };
+		C92A402519175ECF00244024 /* SWModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWModel.m; sourceTree = "<group>"; };
 		C9B24FA219172CF4004532FF /* Spiderweb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spiderweb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B24FAD19172CF4004532FF /* Spiderweb-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Spiderweb-Info.plist"; sourceTree = "<group>"; };
 		C9B24FAF19172CF4004532FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -82,6 +85,17 @@
 			name = Config;
 			sourceTree = "<group>";
 		};
+		C92A402319175EBD00244024 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C92A402419175ECF00244024 /* SWModel.h */,
+				C92A402519175ECF00244024 /* SWModel.m */,
+				C92A401F19174B0200244024 /* SWNode.h */,
+				C92A402019174B0200244024 /* SWNode.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		C9B24F9919172CF4004532FF = {
 			isa = PBXGroup;
 			children = (
@@ -110,8 +124,7 @@
 				C92A401B191747B400244024 /* SWPersistenceManager.h */,
 				C92A401C191747B400244024 /* SWPersistenceManager.m */,
 				C92A402219175CF400244024 /* SWPersistentModel.h */,
-				C92A401F19174B0200244024 /* SWNode.h */,
-				C92A402019174B0200244024 /* SWNode.m */,
+				C92A402319175EBD00244024 /* Model */,
 				C9B24FBA19172CF4004532FF /* MainMenu.xib */,
 				C9B24FBD19172CF4004532FF /* Images.xcassets */,
 				C9B24FAC19172CF4004532FF /* Supporting Files */,
@@ -285,6 +298,7 @@
 				C9B24FB919172CF4004532FF /* SWAppDelegate.m in Sources */,
 				C9B24FB219172CF4004532FF /* main.m in Sources */,
 				C92A401D191747B400244024 /* SWPersistenceManager.m in Sources */,
+				C92A402619175ECF00244024 /* SWModel.m in Sources */,
 				C92A402119174B0200244024 /* SWNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

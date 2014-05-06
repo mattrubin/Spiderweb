@@ -15,15 +15,8 @@
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey
 {
-    return @{@"title": @"Title"};
-}
-
-
-#pragma mark - SWPersistentModel
-
-- (NSString *)persistentFileName
-{
-    return [self.title.lowercaseString stringByReplacingOccurrencesOfString:@" " withString:@"-"];
+    NSDictionary *keyMap = @{@"title": @"Title"};
+    return [[super JSONKeyPathsByPropertyKey] mtl_dictionaryByAddingEntriesFromDictionary:keyMap];
 }
 
 @end

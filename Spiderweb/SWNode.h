@@ -6,11 +6,10 @@
 //  Copyright (c) 2014 Matt Rubin. All rights reserved.
 //
 
-#import <Mantle/Mantle.h>
-#import "SWPersistentModel.h"
+#import "SWModel.h"
 
 
-@interface SWNode : MTLModel <MTLJSONSerializing, SWPersistentModel>
+@interface SWNode : SWModel
 
 @property (nonatomic, copy) NSString *title;
 
