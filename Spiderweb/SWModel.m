@@ -7,6 +7,7 @@
 //
 
 #import "SWModel.h"
+#import "SWNode.h"
 
 
 @implementation SWModel
@@ -36,6 +37,11 @@
 + (NSDictionary *)JSONKeyPathsByPropertyKey
 {
     return @{@"uniqueID": @"ID"};
+}
+
++ (Class)classForParsingJSONDictionary:(NSDictionary *)JSONDictionary
+{
+    return [SWNode class];
 }
 
 
